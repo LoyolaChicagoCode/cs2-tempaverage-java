@@ -15,9 +15,11 @@ public class Main {
       System.out.println("temp[" + pos + "] = " + value);
     }
 
+    // calculate results
+    final TempStats result = Average.calculateStats(temps);
+
     // report results
-    final double average = Average.average(temps);
-    System.out.printf("Average temp = %.1f\n", average);
-    System.out.println(Average.daysAbove(temps, average) + " days above average");
+    System.out.printf("Average temp = %.1f\n", result.average);
+    System.out.println(result.countAboveAverage + " days above average");
   }
 }
