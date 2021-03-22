@@ -5,6 +5,11 @@ import java.util.List;
 public class Average {
 
   public static TempStats calculateStats(final List<Double> temps) {
+
+    if (temps.isEmpty()) {
+      return null;
+    }
+
     double sum = 0;
     for (final double current: temps) {    // read/store each day's temperature
       sum += current;
