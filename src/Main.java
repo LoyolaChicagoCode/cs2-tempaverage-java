@@ -7,17 +7,17 @@ public class Main {
   public static void main(final String[] args) {
 
     // read data
-    final Scanner console = new Scanner(System.in);
-    final List<Double> temps = new ArrayList<>(); // list to store days' temperatures
+    final var console = new Scanner(System.in);
+    final var temps = new ArrayList<Double>(); // list to store days' temperatures
     while (console.hasNextDouble()) {    // read/store each day's temperature
-      final double value = console.nextDouble();
+      final var value = console.nextDouble();
       temps.add(value); // add at the end of the list
-      final int pos = temps.size() - 1;
+      final var pos = temps.size() - 1;
       System.out.println("temp[" + pos + "] = " + value);
     }
 
     // calculate results
-    final TempStats result = Average.calculateStats(temps);
+    final var result = Average.calculateStats(temps);
 
     // report results
     System.out.printf("Average temp = %.1f\n", result.average);

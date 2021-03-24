@@ -12,15 +12,15 @@ public class AverageTest {
 
   @Test
   public void testAverage0() {
-    final List<Double> temps = Collections.emptyList();
-    final TempStats actual = Average.calculateStats(temps);
+    final var temps = Collections.<Double>emptyList();
+    final var actual = Average.calculateStats(temps);
     assertEquals(null, actual);
   }
 
   private void testAverage(final List<Double> temps,
                            final double expectedAverage,
                            final int expectedCountAboveAverage) {
-    final TempStats actual = Average.calculateStats(temps);
+    final var actual = Average.calculateStats(temps);
     assertEquals(expectedAverage, actual.average, DELTA);
     assertEquals(expectedCountAboveAverage, actual.countAboveAverage);
   }

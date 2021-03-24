@@ -10,14 +10,14 @@ public class Average {
       return null;
     }
 
-    double sum = 0;
-    for (final double current: temps) {    // read/store each day's temperature
+    var sum = 0d;
+    for (final var current: temps) {    // read/store each day's temperature
       sum += current;
     }
-    final double average = sum / temps.size();
+    final var average = sum / temps.size();
 
-    int count = 0;                      // see if each day is above average
-    for (final double current: temps) {
+    var count = 0;                      // see if each day is above average
+    for (final var current: temps) {
       if (current > average) {
         count++;
       }
