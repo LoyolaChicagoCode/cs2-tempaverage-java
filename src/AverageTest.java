@@ -1,6 +1,5 @@
 import org.junit.Test;
 
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
@@ -27,11 +26,11 @@ public class AverageTest {
 
   @Test
   public void testAverage1() {
-    testAverage(Arrays.asList(3.4), 3.4, 0);
+    testAverage(List.of(3.4), 3.4, 0);
   }
 
   @Test
   public void testAverage2() {
-    testAverage(Arrays.asList(3.4, 3.6), 3.5, 1);
+    testAverage(List.of(3.4, 3.6), 3.5, 1);
   }
 }
