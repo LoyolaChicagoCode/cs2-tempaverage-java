@@ -1,13 +1,12 @@
-import org.junit.Test;
+import static org.junit.Assert.*;
 
 import java.util.Collections;
 import java.util.List;
-
-import static org.junit.Assert.*;
+import org.junit.Test;
 
 public class AverageTest {
 
-  final static double DELTA = 0.000000001;
+  static final double DELTA = 0.000000001;
 
   @Test
   public void testAverage0() {
@@ -16,9 +15,8 @@ public class AverageTest {
     assertEquals(null, actual);
   }
 
-  private void testAverage(final List<Double> temps,
-                           final double expectedAverage,
-                           final int expectedCountAboveAverage) {
+  private void testAverage(
+      final List<Double> temps, final double expectedAverage, final int expectedCountAboveAverage) {
     final var actual = Average.calculateStats(temps);
     assertEquals(expectedAverage, actual.average, DELTA);
     assertEquals(expectedCountAboveAverage, actual.countAboveAverage);

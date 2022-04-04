@@ -9,7 +9,7 @@ public class Main {
     // read data
     final var console = new Scanner(System.in);
     final var temps = new ArrayList<Double>(); // list to store days' temperatures
-    while (console.hasNextDouble()) {    // read/store each day's temperature
+    while (console.hasNextDouble()) { // read/store each day's temperature
       final var value = console.nextDouble();
       temps.add(value); // add at the end of the list
       final var pos = temps.size() - 1;
