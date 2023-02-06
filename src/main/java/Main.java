@@ -1,7 +1,9 @@
-// Reads temperatures from the user, computes average and # days above average.
-
 import java.util.*;
 
+/**
+ * Reads temperatures from the user, computes average and # days above average.
+ * Supports automated unit testing.
+ */
 public class Main {
 
   public static void main(final String[] args) {
