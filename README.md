@@ -9,4 +9,3 @@ To run the program:
 To run the automated unit tests:
 
   - run `java -ea AverageTest` at a console or shell prompt
-  - 
