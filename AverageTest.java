@@ -6,29 +6,34 @@ import java.util.List;
  */
 public class AverageTest {
 
+  public static void main(final String[] args) {
+    testAverage0();
+    testAverage1();
+    testAverage2();
+  }
+
   static final double DELTA = 0.000000001;
 
-  public void testAverage0() {
+  public static void testAverage0() {
     final var temps = Collections.<Double>emptyList();
     final var actual = Average.calculateStats(temps);
     assert actual == null;
   }
 
-  private void testAverage(
-    final List<Double> temps, 
-    final double expectedAverage, 
-    final int expectedCountAboveAverage
-  ) {
+  private static void testAverage(
+      final List<Double> temps,
+      final double expectedAverage,
+      final int expectedCountAboveAverage) {
     final var actual = Average.calculateStats(temps);
     assert Math.abs(expectedAverage - actual.average) <= DELTA;
     assert expectedCountAboveAverage == actual.countAboveAverage;
   }
 
-  public void testAverage1() {
+  public static void testAverage1() {
     testAverage(List.of(3.4), 3.4, 0);
   }
 
-  public void testAverage2() {
+  public static void testAverage2() {
     testAverage(List.of(3.4, 3.6), 3.5, 1);
   }
 }
