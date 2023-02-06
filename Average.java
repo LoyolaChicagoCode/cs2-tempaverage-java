@@ -1,9 +1,10 @@
-// Reads temperatures from the user, computes average and # days above average.
-
 import java.util.List;
 
 public class Average {
 
+  /**
+   * Computes average and # days above average in the given list.
+   */
   public static TempStats calculateStats(final List<Double> temps) {
 
     if (temps.isEmpty()) {

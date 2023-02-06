@@ -1,3 +1,7 @@
+/**
+ * Represents a temperature average and the number of days above 
+ * that average as a single object.
+ */
 public class TempStats {
 
   public TempStats(final double average, final int countAboveAverage) {
